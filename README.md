@@ -8,7 +8,7 @@ The infrastructure is provisioned using **Terraform**, and the backup process is
 ## 📂 Project Structure
 
 ```
-cron_practices/
+cron_backup/
 │
 ├── azure_infra/
 │   └── main.tf                # Terraform configuration for Azure resources

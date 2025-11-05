@@ -33,6 +33,23 @@ The `azure_infra/` folder contains the Terraform configuration to provision:
 
 ---
 
+## Prerequisites
+
+Before you begin, please ensure you have the following tools installed and configured:
+
+| Tool | Purpose | Installation Guide |
+|------|---------|--------------------|
+| **Terraform** | Used to provision the Azure infrastructure (Resource Group, Storage Account, Outputs). | [Install Terraform CLI](https://developer.hashicorp.com/terraform/install) :contentReference[oaicite:0]{index=0} |
+| **Azure CLI (az)** | Used to interact with Azure (login, resource management) and required by the Terraform provider. | [Install Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) :contentReference[oaicite:1]{index=1} |
+| **Python 3** | Used to run the backup script (`backup.py`) and manage dependencies via `pip`. | [Install Python](https://realpython.com/installing-python/) :contentReference[oaicite:2]{index=2} |
+
+### Additional Setup
+- Ensure you have an Azure subscription with permissions to create Resource Groups and Storage Accounts.  
+- Once Terraform has created the storage account, make sure to copy the **connection string output** into the `.env` file as **BLOB_STORAGE_STRING**.  
+- If you run the Python script via cron (on Linux/macOS), be sure the virtual environment activated path and working directory are correct.
+
+
+
 ### 🧱 1. Initialize Terraform
 
 Go to the Terraform directory:

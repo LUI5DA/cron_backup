@@ -1,4 +1,9 @@
+# --- General ---
 .env
-.log
-.zip
-env
+*.log
+*.zip
+env/
+
+# --- Terraform Infrastructure ---
+azure_infra/*
+!azure_infra/main.tf

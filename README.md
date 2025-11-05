@@ -130,6 +130,7 @@ BLOB_NAME="your_blob_name"
 ```
 
 *(You must use the connection string output from Terraform here.)*
+
 the values of CONTAINER_NAME and BLOB_NAME can be any you want, they container and blob are created for the script if not exists
 ---
 

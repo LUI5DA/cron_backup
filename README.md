@@ -43,6 +43,11 @@ Before you begin, please ensure you have the following tools installed and confi
 | **Azure CLI (az)** | Used to interact with Azure (login, resource management) and required by the Terraform provider. | [Install Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) :contentReference[oaicite:1]{index=1} |
 | **Python 3** | Used to run the backup script (`backup.py`) and manage dependencies via `pip`. | [Install Python](https://realpython.com/installing-python/) :contentReference[oaicite:2]{index=2} |
 
+### 🐧 Important Note
+This project is designed to run in a **Linux environment**, as it relies on **cron** for task scheduling and uses Unix-style paths and commands.  
+While it may be adaptable to other operating systems (like macOS or Windows with WSL), Linux is the **recommended and tested platform** for reliable automation.
+
+
 ### Additional Setup
 - Ensure you have an Azure subscription with permissions to create Resource Groups and Storage Accounts.  
 - Once Terraform has created the storage account, make sure to copy the **connection string output** into the `.env` file as **BLOB_STORAGE_STRING**.  
